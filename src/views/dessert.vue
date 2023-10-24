@@ -1,52 +1,47 @@
 <script>
-import Title from './dessert/Title.vue'
-import Onsale from './dessert/Onsale.vue'
-import News from './dessert/News.vue'
-import NewArrival from './dessert/NewArrival.vue'
-export default{
-  data(){
-    return{
-
-    }
-  },
-  components:{
-   Title,
-   Onsale,
-   News,
-   NewArrival,
-  }
-}
+import Title from "./dessert/title.vue";
+import Onsale from "./dessert/Onsale.vue";
+import News from "./dessert/News.vue";
+import NewArrival from "./dessert/NewArrival.vue";
+export default {
+    data() {
+        return {};
+    },
+    components: {
+        Title,
+        Onsale,
+        News,
+        NewArrival,
+    },
+};
 </script>
 
 <template>
-<div class="main">
-
-    <div class="header">
-        <div class="block"></div>
-        <img src="../../public/甜點圖片/Group 10.png" alt="">
+    <div class="main">
+        <div class="header">
+            <div class="block"></div>
+            <img src="../../public/甜點圖片/Group 10.png" alt="" />
+        </div>
+        <div class="title">
+            <Title />
+        </div>
+        <div class="onsale">
+            <Onsale />
+        </div>
+        <div class="t"></div>
+        <div class="news">
+            <News />
+        </div>
+        <div class="newarrival">
+            <NewArrival />
+        </div>
+        <div class="footer"></div>
     </div>
-    <div class="title">
-        <Title />
-    </div>
-    <div class="onsale">
-        <Onsale />
-    </div>
-    <div class="t"></div>
-    <div class="news">
-        <News />
-    </div>
-    <div class="newarrival">
-        <NewArrival />
-    </div>
-    <div class="footer">
-
-    </div>
-</div>
-
 </template>
 
 <style lang="scss" scoped>
 $c: rgb(243, 173, 173);
+
 .main {
     width: 80%;
     height: 270%;
@@ -55,49 +50,55 @@ $c: rgb(243, 173, 173);
     display: flex;
     flex-direction: column;
     align-items: center;
-    .header{
+
+    .header {
         width: 100%;
         height: 7%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0px 25px;
-        .block{
+
+        .block {
             width: 100px;
             height: 100px;
             background-color: $c;
         }
     }
-    .title{
+
+    .title {
         width: 100%;
         height: 18%;
         display: flex;
     }
-    .onsale{
+
+    .onsale {
         width: 100%;
         height: 20%;
     }
-    .t{
+
+    .t {
         width: 90%;
         height: 0.1%;
         background-color: black;
     }
-    .news{
+
+    .news {
         width: 100%;
         height: 25%;
     }
-    .newarrival{
+
+    .newarrival {
         width: 100%;
         height: 25%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .footer{
+
+    .footer {
         width: 100%;
         height: 5%;
         background-color: $c;
     }
-}
-
-</style>
+}</style>

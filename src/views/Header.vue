@@ -20,6 +20,11 @@ import Test from './test.vue';
   <RouterLink to="bs">bs</RouterLink>
   <RouterLink to="von">v-on</RouterLink>
   <RouterLink to="dessert">dessert</RouterLink>
+  <RouterLink to="vbind">v-bind</RouterLink>
+  <RouterLink to="waterfall">waterfall</RouterLink>
+  <RouterLink to="vif">v-if</RouterLink>
+  <RouterLink to="props">props</RouterLink>
+  <RouterLink to="propsign">propsign</RouterLink>
   <!-- <Test/> -->
   </div>
 
@@ -35,6 +40,8 @@ import Test from './test.vue';
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+   
   }
   a{
     margin-right: 50px;

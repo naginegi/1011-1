@@ -40,7 +40,7 @@ export default{
             <option value="5">5</option>
         </select>
         
-        <p>{{ this.textblock }}</p>
+        <p>{{ this.textblock  }}</p>
         <input type="number" v-model="textblock">
         <test v-text="textblock" />
 

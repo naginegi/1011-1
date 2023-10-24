@@ -2,7 +2,11 @@
 export default {
     data() {
         return {
-
+            imgarr:[
+            "../../../public/甜點圖片/5.png",
+            "../../../public/甜點圖片/6.png",
+            "../../../public/甜點圖片/7.png"
+            ]
         }
     },
     components: {
@@ -32,15 +36,15 @@ export default {
     </div> -->
     <h1>News</h1>
     <div class="area">
-        <div class="card">
-            <img src="../../../public/甜點圖片/5.png" class="card-img-top" alt="...">
+        <div class="card" v-for="img in imgarr">
+            <img :src="img" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet.</p>
                 <a href="#" class="btn btn-primary">Detail</a>
             </div>
         </div>
-
+<!-- 
         <div class="card">
             <img src="../../../public/甜點圖片/6.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -56,7 +60,7 @@ export default {
                 <p class="card-text">Lorem ipsum dolor sit amet.</p>
                 <a href="#" class="btn btn-primary">Detail</a>
             </div>
-        </div>
+        </div> -->
     </div>
     <button type="button" class="btn-more">More</button>
 </template>

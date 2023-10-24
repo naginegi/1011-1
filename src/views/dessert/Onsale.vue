@@ -2,7 +2,11 @@
 export default {
     data() {
         return {
-
+            imgarr:[
+            "../../../public/甜點圖片/2.png",
+            "../../../public/甜點圖片/3.png",
+            "../../../public/甜點圖片/4.png"
+            ]
         }
     },
     components: {
@@ -15,18 +19,18 @@ export default {
     <h1>On sale</h1>
     <div class="area">
 
-        <div class="card">
-            <img src="../../../public/甜點圖片/2.png">
+        <div class="card" v-for=" img in imgarr">
+            <img v-bind:src="img">
             <button type="button">item</button>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <img src="../../../public/甜點圖片/3.png">
             <button type="button">item</button>
         </div>
         <div class="card">
             <img src="../../../public/甜點圖片/4.png">
             <button type="button">item</button>
-        </div>
+        </div> -->
     </div>
 </template>
 

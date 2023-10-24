@@ -45,7 +45,34 @@ const router = createRouter({
       path:'/dessert',
       name:'dessert',
       component:() => import('../views/dessert.vue')
-    }
+    },
+    {
+      path:'/vbind',
+      name:'vbind',
+      component:() => import('../views/vbind.vue')
+    },
+    {
+      path:'/waterfall',
+      name:'waterfall',
+      component:() => import('../views/waterfall.vue')
+    },
+    {
+      path:'/vif',
+      name:'vif',
+      component:() => import('../views/vif.vue')
+    },
+    {
+      path:'/props',
+      name:'props',
+      component:() => import('../components/props.vue')
+      
+    },
+    {
+      path:'/propsign',
+      name:'propsign',
+      component:() => import('../views/propsign.vue')
+      
+    },
   ]
 })
 

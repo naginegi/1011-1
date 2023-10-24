@@ -35,6 +35,7 @@ export default{
   width: 100vw;
   height: 20vh;
   background-color: rgb(243, 173, 173);
+  overflow: auto;
   // color: white;
 }
 .contain{
@@ -43,6 +44,8 @@ export default{
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-top: 20px;
+  // background-color: #f8f2ea;
 }
 </style>
