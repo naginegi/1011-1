@@ -11,6 +11,9 @@ import Test from './test.vue';
 
 
 <template>
+  <!-- ///////////////////// -->
+  
+  <!-- ///////////////////// -->
   <!-- <p>header</p> -->
   <div class="link">
   <RouterLink to="/">home</RouterLink>
@@ -25,8 +28,13 @@ import Test from './test.vue';
   <RouterLink to="vif">v-if</RouterLink>
   <RouterLink to="props">props</RouterLink>
   <RouterLink to="propsign">propsign</RouterLink>
+  <RouterLink to="emit">emit</RouterLink>
+  <RouterLink to="pemix">pemix</RouterLink>
+  <RouterLink to="ET">expense tracker</RouterLink>
+  <RouterLink to="provideAndinject">provideAndinject</RouterLink>
   <!-- <Test/> -->
   </div>
+
 
 </template>
 
@@ -41,7 +49,6 @@ import Test from './test.vue';
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-   
   }
   a{
     margin-right: 50px;

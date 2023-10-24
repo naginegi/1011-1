@@ -73,6 +73,44 @@ const router = createRouter({
       component:() => import('../views/propsign.vue')
       
     },
+    {
+      path:'/emit',
+      name:'emit',
+      component:() => import('../views/emit.vue')
+      
+    },
+    {
+      path:'/pemix',
+      name:'pemix',
+      component:() => import('../views/propsemit/props.vue')
+      
+    },
+    {
+      path:'/ET',
+      name:'ET',
+      component:() => import('../views/ET/home.vue'),
+      children:[
+        {
+          path:'login',
+          component:() => import('../views/ET/login.vue'),
+          alias:'',
+        },
+        {
+          path:'signup',
+          component:() => import('../views/ET/signup.vue'),
+        },
+        {
+          path:'ET',
+          component:() => import('../views/ET/ET.vue'),
+        },
+      ]
+    },
+    {
+      path:'/provideAndinject',
+      name:'provideAndinject',
+      component:() => import('../views/provideAndinject/provideAndinject.vue')
+      
+    },
   ]
 })
 

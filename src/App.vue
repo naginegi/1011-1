@@ -19,13 +19,14 @@ export default{
 </script>
 
 <template>  
-<div class="top">
 
+<div class="top">
   <Header />
 </div>
 <div class="contain">
   <!-- <test /> -->
   <RouterView />
+  
 </div>
 
 </template>
@@ -46,6 +47,7 @@ export default{
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   // background-color: #f8f2ea;
 }
 </style>
