@@ -34,7 +34,7 @@ const router = createRouter({
     {
       path:'/bs',
       name:'bs',
-      component:() => import('../views/bs.vue')
+      component:() => import('../views/test1.vue')
     },
     {
       path:'/von',
@@ -109,6 +109,30 @@ const router = createRouter({
       path:'/provideAndinject',
       name:'provideAndinject',
       component:() => import('../views/provideAndinject/provideAndinject.vue')
+      
+    },
+    {
+      path:'/watch',
+      name:'watch',
+      component:() => import('../views/watch.vue')
+      
+    },
+    {
+      path:'/pinia',
+      name:'pinia',
+      component:() => import('../views/pinia.vue')
+      
+    },
+    {
+      path:'/test',
+      name:'test',
+      component:() => import('../views/test.vue')
+      
+    },
+    {
+      path:'/challenge',
+      name:'challenge',
+      component:() => import('../views/fishchallenge.vue')
       
     },
   ]

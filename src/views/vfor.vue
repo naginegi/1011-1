@@ -1,4 +1,6 @@
 <script>
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default{
     data(){
         return{
@@ -23,7 +25,11 @@ export default{
             ]
         }
     },
+    mounted(){
+        this.setLocation(3)
+    },
     methods:{
+        ...mapActions(indexState,["setLocation"]),
         plus(){
             this.arr1.push(this.i++);
         },

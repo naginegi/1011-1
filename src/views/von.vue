@@ -1,4 +1,6 @@
 <script>
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default {
     data() {
         return {
@@ -13,8 +15,10 @@ export default {
     },
     mounted(){
         this.randon();
+        this.setLocation(4)
     },
     methods: {
+        ...mapActions(indexState,["setLocation"]),
         display1(){
             this.t = this.text;
             this.display2();

@@ -2,6 +2,8 @@
 import {RouterLink,RouterView} from "vue-router";
 import signup from "../ET/signup.vue";
 import ET from "./ET.vue";
+import {mapState, mapActions} from 'pinia';
+import indexState from '../../stores/indexstate';
 export default {
     data() {
         return {
@@ -18,8 +20,10 @@ export default {
         if(savedTransactions){
         this.dataobj = JSON.parse(savedTransactions);
         }
+        this.setLocation(14)
     },
     methods: {
+        ...mapActions(indexState,["setLocation"]),
         swit(){
             this.page = 1;
         },

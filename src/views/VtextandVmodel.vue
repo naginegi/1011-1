@@ -1,5 +1,7 @@
 <script>
-import test from "./test.vue"
+import test from "./test.vue";
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default{
     data(){
         return{
@@ -14,14 +16,17 @@ export default{
         }
     },
     components:{
-
         test,
     },
     methods:{
         t(){
             console.log(this.numbertext)
-        }
-    }
+        },
+        ...mapActions(indexState,["setLocation"]),
+    },
+    mounted(){
+        this.setLocation(2)
+    },
 }
 
 
@@ -42,7 +47,7 @@ export default{
         
         <p>{{ this.textblock  }}</p>
         <input type="number" v-model="textblock">
-        <test v-text="textblock" />
+        <!-- <test v-text="textblock" /> -->
 
         <!-- lazy number trim -->
         <!-- lazy:離開作用區域時啟動，model是同步啟動 -->
@@ -85,7 +90,7 @@ export default{
 
 <style lang="scss" scoped>
 .main{
-    width: 80%;
+    width: 50%;
     height: 90%;
     border: 1px solid black;
     display: flex;

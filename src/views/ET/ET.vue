@@ -1,6 +1,7 @@
 <script>
 import ETadd from './ETadd.vue';
 import ETitem from './ETitem.vue';
+
 export default {
     data() {
         return {
@@ -18,8 +19,11 @@ export default {
         this.itemarr = JSON.parse(savedTransactions);
         this.cal();
         }
+        
     },
+    
     methods: {
+        
         pageon(){
             this.page=true;
         },

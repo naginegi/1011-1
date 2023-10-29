@@ -1,6 +1,8 @@
 <script>
 import emit1 from './emit1.vue';
 import emit2 from './emit2.vue';
+import {mapState, mapActions} from 'pinia';
+import indexState from '../../stores/indexstate';
 export default{
     data(){
         return{
@@ -19,7 +21,11 @@ export default{
         getobj(obj){
             this.propobj = obj;
             console.log(this.propobj);
-        }
+        },
+        ...mapActions(indexState,["setLocation"]),
+    },
+    mounted(){
+        this.setLocation(12)
     },
     components:{
         emit1,

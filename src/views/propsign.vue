@@ -1,5 +1,7 @@
 <script>
 // import {RouterLink,RouterView} from 'vue-router'
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 import child from "../components/child.vue";
 export default {
     data() {
@@ -77,6 +79,10 @@ export default {
             this.page = 2;
         },
 
+        ...mapActions(indexState,["setLocation"]),
+    },
+    mounted(){
+        this.setLocation(10)
     },
     components: {
         child,
@@ -175,7 +181,7 @@ export default {
 <style lang="scss" scoped>
 .area {
     width: 60%;
-    height: 60%;
+    height: 75%;
 
     .show {
         width: 100%;

@@ -3,9 +3,17 @@ import Title from "./dessert/title.vue";
 import Onsale from "./dessert/Onsale.vue";
 import News from "./dessert/News.vue";
 import NewArrival from "./dessert/NewArrival.vue";
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default {
     data() {
         return {};
+    },
+    mounted(){
+        this.setLocation(17)
+    },
+    methods:{
+        ...mapActions(indexState,["setLocation"]),
     },
     components: {
         Title,

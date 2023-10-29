@@ -1,5 +1,7 @@
 <script>
 import emitchild from './emitchild.vue';
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default{
     data(){
         return{
@@ -11,11 +13,15 @@ export default{
         emitobj(data){
             console.log(data);
             this.displaytext = data;
-        }
+        },
+        ...mapActions(indexState,["setLocation"]),
     },
     components:{
         emitchild,
-    }
+    },
+    mounted(){
+        this.setLocation(11)
+    },
 }
 </script>
 
@@ -24,7 +30,7 @@ export default{
     <p>{{ this.displaytext }}</p>
     <!-- 3.接收到子層來的"message"，將裡面帶著的資料傳進"emitobj"裡執行 -->
     <emitchild @message="emitobj"/>
-    <input type="text">
+    <!-- <input type="text"> -->
 </div>
 </template>
 

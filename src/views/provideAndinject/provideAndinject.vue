@@ -1,10 +1,18 @@
 <script>
 import provideChild1 from './provideChild1.vue'
+import {mapState, mapActions} from 'pinia';
+import indexState from '../../stores/indexstate';
 export default{
     data(){
         return{
             dataMsg:"message"
         }
+    },
+    methods:{
+        ...mapActions(indexState,["setLocation"]),
+    },
+    mounted(){
+        this.setLocation(13)
     },
     components:{
         provideChild1,

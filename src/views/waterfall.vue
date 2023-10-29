@@ -1,4 +1,6 @@
 <script>
+import {mapState, mapActions} from 'pinia';
+import indexState from '../stores/indexstate';
 export default {
     data() {
         return {
@@ -40,6 +42,7 @@ export default {
         }
     },
     methods:{
+        ...mapActions(indexState,["setLocation"]),
         random(){
             this.arroid = [];
             for(let i = 1 ; i<=this.imgarr.length ; i++){
@@ -49,7 +52,10 @@ export default {
             }
             console.log(this.arroid);
         }
-    }
+    },
+    mounted(){
+        this.setLocation(15)
+    },
 }
 </script>
 
